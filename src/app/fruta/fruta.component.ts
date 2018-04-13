@@ -28,9 +28,9 @@ export class FrutaComponent {
         // Asigna los datos iniciales de las propiedades de la clase
         this .nombre_componente = 'Componente de fruta';       // Tipo 'string' cadena
         this .toneladas_vendidas = 30;                         // Tipo 'number' numero, soporta enteros y decimales
-        this .existencia_frutas = true;                       // Tipo 'boolean' soporta true / false
+        this .existencia_frutas = true;                        // Tipo 'boolean' soporta true / false
         this .existencia_semillas = false;
-        this .cualquier_cosa_1 = 'Bryan Paul';                    // Tipo 'any' soporta todos los tipos, como lo hace JavaScript
+        this .cualquier_cosa_1 = 'Bryan Paul';                 // Tipo 'any' soporta todos los tipos, como lo hace JavaScript
         this .cualquier_cosa_2 = 2;
         this .cualquier_cosa_3 = true;
 
@@ -41,11 +41,28 @@ export class FrutaComponent {
         this .cualquier_cosa_5 = [ true, 0, 'Mora', 13.0, false, 'Mango' ];
         this .cualquier_cosa_6 = [ true, 0, 'Mora', 13.0, false, 'Mango' ];
 
-        /* NOTA: Usualmente se utiliza para asignar valores a las propiedades o
-                 pedir parámetros iniciales ante la instanciación de un objeto,
-                 entre otras */
+        /* NOTAS:
+            - Usualmente se utiliza para asignar valores a las propiedades o
+              pedir parámetros iniciales ante la instanciación de un objeto,
+              entre otras
+            - Por convención y buenas práticas es que se propone el uso sugerido
+        */
 
        console .log( 'Ejecuta el Constructor de la clase "Fruta"' );
        console .log( 'Frutas ácidas', this .frutas_acidas );
+
+       /* En Angular NO es una buena practica llamar métodos de la misma clase dentro del constructor */
+       this .saludar( this .cualquier_cosa_1 );
+       this .cambiarResponsable( 'Juan David' );
     }
+
+    /* Métodos */
+    private saludar( nombre ) {
+        alert( `Hola soy ${ nombre } y el ${ this .nombre_componente } te saluda!` );
+        console .log( 'Ejecuta Método "saludar"' );
+    }
+    private cambiarResponsable( nombre ) {
+        this .cualquier_cosa_1 = nombre;
+    }
+
 }
