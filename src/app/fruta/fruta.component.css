@@ -1,7 +1,10 @@
 h2 {
     color: red;
 }
+h3 {
+    color: orange;
+}
 
-p span {
+p span, li span {
     font-weight: bold;
 }

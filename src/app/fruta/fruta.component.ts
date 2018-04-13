@@ -7,12 +7,19 @@ import { Component } from '@angular/core';
 })
 export class FrutaComponent {
     /* Propiedades (Atributos) */
-    nombre_componente = 'Componente de fruta';                  // Si no se define el tipo de visibilidad se asume que es 'public'
-    public listado_frutas_acidas = 'Bergamota, Clementina, Cidra, Lima, Limón, Mandarina, Naranja';
-    private listado_frutas_neutras = 'Aceituna, Avellana, Coco, Maní, Cacao, Aguacate, Castaña, Almendra, Nuez y Macadamia';
-    protected listado_frutas_dulces = 'Melón, Plátano, Sandía, Manzana Golden, Ciruelas, Uvas, Albaricoque, Chirimoya, Caqui, Grosella, Granada';
+    public nombre_componente: string = 'Componente de fruta';       // Tipo 'string' cadena
+    public toneladas_vendidas: number = 30;                         // Tipo 'number' numero, soporta: enteros y decimales
+    public existencia_frutas: boolean = true;                       // Tipo 'boolean' soporta: true / false
+    public existencia_semillas: boolean = false;
+    public cualquier_cosa_1: any = 'Bryan Paul';                    // Tipo 'any' soporta todos los tipos, como lo hace JavaScript
+    public cualquier_cosa_2: any = 2;
+    public cualquier_cosa_3: any = true;
 
-    /* NOTA: La visibilidad de cada una de las propiedades solo funcionan de cara
-             a otras clases, no será tenida en cuenta por TypeScript al desplegarla
-             en vista del componente */
+    // Listado de 'Arrays' con todos los tipos
+    public frutas_acidas: Array<string> = [ 'Bergamota', 'Clementina', 'Cidra', 'Lima', 'Limón', 'Mandarina', 'Naranja' ];
+    public numeros: Array<number> = [ 10, 4.6, -9, 3, 15.2 ];
+    public falso_verdadero: Array<boolean> = [ true, false, false, true, true ];
+    public cualquier_cosa_4: Array<any> = [ true, 0, 'Mora', 13.0, false, 'Mango' ];
+    public cualquier_cosa_5: Array = [ true, 0, 'Mora', 13.0, false, 'Mango' ];
+    public cualquier_cosa_6 = [ true, 0, 'Mora', 13.0, false, 'Mango' ];
 }
