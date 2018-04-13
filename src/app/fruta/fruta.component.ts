@@ -2,10 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
     selector: 'app-fruta',
-    template: `
-        <h2>{{ nombre_componente }}</h2>
-        <p>{{ listado_frutas }}</p>
-    `
+    templateUrl: './fruta.component.html',
+    styleUrls: [ './fruta.component.css' ]
 })
 export class FrutaComponent {
     /* Propiedades (Atributos) */
