@@ -60,31 +60,6 @@ export class FrutaComponent {
         this .saludar( this .cualquier_cosa_1 );
         this .cambiarResponsable( 'Juan David' );
         console .log( 'Ejecuta el "ngOnInit" de la clase "Fruta"' );
-
-        // Variables y su alcance (let vs var)
-        var valor_var = 1;
-        let valor_let = 9;
-
-        console .group( 'Definición de valores iniciales' );
-        console .log( 'var valor:', valor_var );
-        console .log( 'let valor:', valor_let );
-        console .groupEnd();
-
-        if( true ) {
-
-            var valor_var = 10;
-            let valor_let = 11;
-
-            console .group( 'Dentro del bloque del condicional IF' );
-            console .log( 'var valor:', valor_var );
-            console .log( 'let valor:', valor_let );
-            console .groupEnd();
-        }
-
-        console .group( 'Fuera del bloque del condicional IF' );
-        console .log( 'var valor:', valor_var );
-        console .log( 'let valor:', valor_let );
-        console .groupEnd();
     }
 
 
