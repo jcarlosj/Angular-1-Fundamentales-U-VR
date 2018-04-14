@@ -8,6 +8,6 @@ import { Component } from '@angular/core';
 export class EmpleadoComponent {
     /* Propiedades (Atributos) */
     public nombre_componente = 'Componente de Empleado';
-    public listado_empleados = 'Jhonny, Juan, Bryan, Maura', 'Charles', 'Melisa';
+    public listado_empleados = 'Jhonny, Juan, Bryan, Maura, Charles, Melisa';
 
 }

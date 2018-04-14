@@ -20,7 +20,7 @@ export class FrutaComponent {
     public numeros: Array<number>;
     public falso_verdadero: Array<boolean>;
     public cualquier_cosa_4: Array<any>;
-    public cualquier_cosa_5: Array;
+    //public cualquier_cosa_5: Array;           // Genera un Error
     public cualquier_cosa_6;
 
     /* Constructor */
@@ -38,7 +38,7 @@ export class FrutaComponent {
         this .numeros = [ 10, 4.6, -9, 3, 15.2 ];
         this .falso_verdadero = [ true, false, false, true, true ];
         this .cualquier_cosa_4 = [ true, 0, 'Mora', 13.0, false, 'Mango' ];
-        this .cualquier_cosa_5 = [ true, 0, 'Mora', 13.0, false, 'Mango' ];
+        //this .cualquier_cosa_5 = [ true, 0, 'Mora', 13.0, false, 'Mango' ];
         this .cualquier_cosa_6 = [ true, 0, 'Mora', 13.0, false, 'Mango' ];
 
         /* NOTAS:
@@ -50,11 +50,18 @@ export class FrutaComponent {
 
        console .log( 'Ejecuta el Constructor de la clase "Fruta"' );
        console .log( 'Frutas ácidas', this .frutas_acidas );
-
-       /* En Angular NO es una buena practica llamar métodos de la misma clase dentro del constructor */
-       this .saludar( this .cualquier_cosa_1 );
-       this .cambiarResponsable( 'Juan David' );
     }
+
+    /* Método  que se ejecuta despues de cargar el componente pero el segundo después del constructor de la clase
+       se usa para llamar métodos después del constructor, pero especial para cargar funcionalidades del Componente
+       y demás funcionalidades del Core de Angular */
+    ngOnInit() {
+        /* En Angular es una buena practica llamar métodos de la misma clase dentro de 'ngOnInit' */
+        this .saludar( this .cualquier_cosa_1 );
+        this .cambiarResponsable( 'Juan David' );
+        console .log( 'Ejecuta el "ngOnInit" de la clase "Fruta"' );
+    }
+
 
     /* Métodos */
     private saludar( nombre ) {
@@ -63,6 +70,7 @@ export class FrutaComponent {
     }
     private cambiarResponsable( nombre ) {
         this .cualquier_cosa_1 = nombre;
+        console .log( 'Ejecuta Método "cambiarResponsable"' );
     }
 
 }
