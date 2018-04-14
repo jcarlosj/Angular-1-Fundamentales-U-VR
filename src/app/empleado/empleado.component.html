@@ -1,2 +1,7 @@
 <h2>{{ nombre_componente }}</h2>
-<p>{{ listado_empleados }}</p>
+<ul>
+    <li><b>Nombre: </b>{{ empleado .nombre }}</li>
+    <li><b>Edad: </b>{{ empleado .edad }}</li>
+    <li><b>Cargo: </b>{{ empleado .cargo }}</li>
+    <li><b>Contratado: </b>{{ empleado .contratado }}</li>
+</ul>
