@@ -11,10 +11,23 @@ export class EmpleadoComponent {
     /* Propiedades (Atributos) */
     public nombre_componente = 'Componente de Empleado';
     public empleado: Empleado;          // Define una propiedad de tipo 'Empleado' (Modelo de datos)
+    public equipo:Array<Empleado>;      // Define una propuedad 'Array' de tipo Empleado (Listado de 'registros' de empleados)
+
+    /* Constructor */
+    constructor() {
+        // Las definiciones por buenas prácticas se hacen en el constructor
+        this .empleado = new Empleado( 'Juan David', 23, 'Desarrollador Junior WordPress', true );
+        this .equipo = [
+            new Empleado( 'Alejandro', 25, 'Desarrollador Back-End WordPress', true ),
+            new Empleado( 'Yorkasta', 27, 'Desarrollador Front-End para WordPress', true ),
+            new Empleado( 'Melisa', 23, 'Experta Marketing Digital', false )
+        ];
+    }
 
     /* Métodos de Angular */
     ngOnInit() {
-        this .empleado = new Empleado( 'Juan David', 23, 'Desarrollador Junior WordPress', true );
+        // Si se hace una petición de datos con AJAX, las definiciones deben hacerse en el método de inicialización de Angular 'ngOnInit'
         console .log( this .empleado );
+        console .log( this .equipo );
     }
 }
