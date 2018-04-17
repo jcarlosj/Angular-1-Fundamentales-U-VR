@@ -11,7 +11,8 @@ export class EmpleadoComponent {
     /* Propiedades (Atributos) */
     public nombre_componente = 'Componente de Empleado';
     public empleado: Empleado;          // Define una propiedad de tipo 'Empleado' (Modelo de datos)
-    public equipo:Array<Empleado>;      // Define una propuedad 'Array' de tipo Empleado (Listado de 'registros' de empleados)
+    public equipo:Array<Empleado>;      // Define una propiedad 'Array' de tipo Empleado (Listado de 'registros' de empleados)
+    public contradado: boolean; // Define una propiedad de tipo 'boolean'
 
     /* Constructor */
     constructor() {
@@ -22,6 +23,7 @@ export class EmpleadoComponent {
             new Empleado( 'Yorkasta', 27, 'Desarrollador Front-End para WordPress', true ),
             new Empleado( 'Melisa', 23, 'Experta Marketing Digital', false )
         ];
+        this .contradado = false;
     }
 
     /* Métodos de Angular */
@@ -29,5 +31,9 @@ export class EmpleadoComponent {
         // Si se hace una petición de datos con AJAX, las definiciones deben hacerse en el método de inicialización de Angular 'ngOnInit'
         console .log( this .empleado );
         console .log( this .equipo );
+    }
+
+    public cambiaEstadoContradado( valor ) {
+        this .contradado = valor;
     }
 }

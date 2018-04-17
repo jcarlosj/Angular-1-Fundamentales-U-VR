@@ -1,14 +1,23 @@
 <h2>{{ nombre_componente }}</h2>
-<ul>
-    <li><b>Nombre: </b>{{ empleado .nombre }}</li>
-    <li><b>Edad: </b>{{ empleado .edad }}</li>
-    <li><b>Cargo: </b>{{ empleado .cargo }}</li>
-    <li><b>Contratado: </b>{{ empleado .contratado }}</li>
-</ul>
-<h3>Pendientes por aprobación de contrato</h3>
-<ul>
-    <li><b>Nombre: </b>{{ equipo[ 2 ] .nombre }}</li>
-    <li><b>Edad: </b>{{ equipo[ 2 ] .edad }}</li>
-    <li><b>Cargo: </b>{{ equipo[ 2 ] .cargo }}</li>
-    <li><b>Contratado: </b>{{ equipo[ 2 ] .contratado }}</li>
-</ul>
+
+<div *ngIf="contradado == false">
+    <h3>Trabajador de planta</h3>
+    <button>Pendiente de contrato</button>
+    <ul>
+        <li><b>Nombre: </b>{{ empleado .nombre }}</li>
+        <li><b>Edad: </b>{{ empleado .edad }}</li>
+        <li><b>Cargo: </b>{{ empleado .cargo }}</li>
+        <li><b>Contratado: </b>{{ empleado .contratado }}</li>
+    </ul>
+</div>
+
+<div *ngIf="contradado == true">
+    <h3>Pendientes por aprobación de contrato</h3>
+    <button>Trabajador de planta</button>
+    <ul>
+        <li><b>Nombre: </b>{{ equipo[ 2 ] .nombre }}</li>
+        <li><b>Edad: </b>{{ equipo[ 2 ] .edad }}</li>
+        <li><b>Cargo: </b>{{ equipo[ 2 ] .cargo }}</li>
+        <li><b>Contratado: </b>{{ equipo[ 2 ] .contratado }}</li>
+    </ul>
+</div>
