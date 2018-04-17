@@ -17,7 +17,8 @@
 <div *ngIf="contradado == true">
     <h3>Listado de candidatos para contratar</h3>
     <button (click)="cambiaEstadoContradado( false )">Equipo actual</button>
-    <ul *ngFor="let candidato of equipo">
+    <ul *ngFor="let candidato of equipo; let i = index;">
+        <li><b>Candidato: </b>{{ i + 1 }}</li>
         <li><b>Nombre: </b>{{ candidato .nombre }}</li>
         <li><b>Edad: </b>{{ candidato .edad }}</li>
         <li><b>Cargo: </b>{{ candidato .cargo }}</li>
