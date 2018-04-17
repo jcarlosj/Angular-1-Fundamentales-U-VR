@@ -2,7 +2,7 @@
 
 <div *ngIf="contradado == false">
     <h3>Trabajador de planta</h3>
-    <button>Pendiente de contrato</button>
+    <button (click)="cambiaEstadoContradado( true )" >Pendiente de contrato</button>
     <ul>
         <li><b>Nombre: </b>{{ empleado .nombre }}</li>
         <li><b>Edad: </b>{{ empleado .edad }}</li>
@@ -13,7 +13,7 @@
 
 <div *ngIf="contradado == true">
     <h3>Pendientes por aprobación de contrato</h3>
-    <button>Trabajador de planta</button>
+    <button (click)="cambiaEstadoContradado( false )">Trabajador de planta</button>
     <ul>
         <li><b>Nombre: </b>{{ equipo[ 2 ] .nombre }}</li>
         <li><b>Edad: </b>{{ equipo[ 2 ] .edad }}</li>
