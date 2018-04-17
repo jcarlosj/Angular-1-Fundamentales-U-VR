@@ -7,7 +7,10 @@
         <li><b>Nombre: </b>{{ empleado .nombre }}</li>
         <li><b>Edad: </b>{{ empleado .edad }}</li>
         <li><b>Cargo: </b>{{ empleado .cargo }}</li>
-        <li><b>Contratado: </b>{{ empleado .contratado }}</li>
+        <li><b>Contratado: </b>
+            <span *ngIf="empleado .contratado">Vigente</span>
+            <span *ngIf="! empleado .contratado">No contratado o caduco</span>
+        </li>
     </ul>
 </div>
 
@@ -18,6 +21,9 @@
         <li><b>Nombre: </b>{{ equipo[ 2 ] .nombre }}</li>
         <li><b>Edad: </b>{{ equipo[ 2 ] .edad }}</li>
         <li><b>Cargo: </b>{{ equipo[ 2 ] .cargo }}</li>
-        <li><b>Contratado: </b>{{ equipo[ 2 ] .contratado }}</li>
+        <li><b>Contratado: </b>
+            <span *ngIf="equipo[ 2 ] .contratado">Vigente</span>
+            <span *ngIf="! equipo[ 2 ] .contratado">No contratado o caduco</span>
+        </li>
     </ul>
 </div>
