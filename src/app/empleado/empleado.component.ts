@@ -20,7 +20,7 @@ export class EmpleadoComponent {
         // Las definiciones por buenas prácticas se hacen en el constructor
         this .empleado = new Empleado( 'Juan David', 23, 'Desarrollador Junior WordPress', true, 'contratado' );
         this .equipo = [
-            new Empleado( 'Alejandro', 25, 'Desarrollador Back-End WordPress', true, 'prueba' ),
+            new Empleado( 'Alejandro', 25, 'Desarrollador Back-End WordPress', false, 'prueba' ),
             new Empleado( 'Yokasta', 27, 'Desarrollador Front-End para WordPress', true, 'contratado' ),
             new Empleado( 'Melisa', 23, 'Experta Marketing Digital', false, 'entrevista' ),
             new Empleado( 'Ximena', 32, 'Administradora y generadora de contenidos', false, 'prueba' ),
