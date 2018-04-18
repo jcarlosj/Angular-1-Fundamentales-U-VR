@@ -3,7 +3,11 @@
 <div *ngIf="contradado == false">
     <h3>Trabajador de planta</h3>
     <button (click)="cambiaEstadoContradado( true )" >Candidatos</button>
-    <ul>
+    <ul [ngStyle]="{
+        'background-color': color,
+        'color': 'white',
+        'padding': '8px'
+    }">
         <li><b>Nombre: </b>{{ empleado .nombre }}</li>
         <li><b>Edad: </b>{{ empleado .edad }}</li>
         <li><b>Cargo: </b>{{ empleado .cargo }}</li>
@@ -35,7 +39,7 @@
                 <span *ngIf="! candidato .contratado" [ngStyle]="{
                     'color': 'blue',
                     'font-weight': 'normal',
-                    'text-transform': 'lowercase' 
+                    'text-transform': 'lowercase'
                 }">
                     Pendiente,
                     <span *ngSwitchCase="'entrevista'">entrevista</span>

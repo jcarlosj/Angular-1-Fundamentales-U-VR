@@ -27,6 +27,7 @@ export class EmpleadoComponent {
             new Empleado( 'Germán Darío', 34, 'Periodismo digital y contenidos comerciales', false, 'resultado' )
         ];
         this .contradado = false;
+        this .color = 'green';
     }
 
     /* Métodos de Angular */
