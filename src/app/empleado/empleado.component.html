@@ -23,8 +23,16 @@
         <li><b>Edad: </b>{{ candidato .edad }}</li>
         <li><b>Cargo: </b>{{ candidato .cargo }}</li>
         <li><b>Contratado: </b>
-            <span *ngIf="candidato .contratado">Aceptado</span>
-            <span *ngIf="! candidato .contratado">En proceso</span>
+            <span [ngSwitch]="candidato .estado_seleccion">
+                <span *ngIf="candidato .contratado">Aceptado, </span>
+                      <span *ngSwitchCase="'contratado'">Contratado</span>
+
+                <span *ngIf="! candidato .contratado">Pendiente, </span>
+                      <span *ngSwitchCase="'entrevista'">entrevista</span>
+                      <span *ngSwitchCase="'prueba'">prueba técnica</span>
+                      <span *ngSwitchCase="'resultado'">resultado</span>
+            </span>
+            <!-- Cuando se usan [] los corchetes se dice que es una directiva de atributo (elemento HTML) -->
         </li>
     </ul>
 </div>

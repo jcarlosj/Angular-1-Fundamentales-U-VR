@@ -13,15 +13,18 @@ export class EmpleadoComponent {
     public empleado: Empleado;          // Define una propiedad de tipo 'Empleado' (Modelo de datos)
     public equipo:Array<Empleado>;      // Define una propiedad 'Array' de tipo Empleado (Listado de 'registros' de empleados)
     public contradado: boolean; // Define una propiedad de tipo 'boolean'
+    public color: string;
 
     /* Constructor */
     constructor() {
         // Las definiciones por buenas prácticas se hacen en el constructor
-        this .empleado = new Empleado( 'Juan David', 23, 'Desarrollador Junior WordPress', true );
+        this .empleado = new Empleado( 'Juan David', 23, 'Desarrollador Junior WordPress', true, 'contratado' );
         this .equipo = [
-            new Empleado( 'Alejandro', 25, 'Desarrollador Back-End WordPress', true ),
-            new Empleado( 'Yorkasta', 27, 'Desarrollador Front-End para WordPress', true ),
-            new Empleado( 'Melisa', 23, 'Experta Marketing Digital', false )
+            new Empleado( 'Alejandro', 25, 'Desarrollador Back-End WordPress', true, 'prueba' ),
+            new Empleado( 'Yokasta', 27, 'Desarrollador Front-End para WordPress', true, 'contratado' ),
+            new Empleado( 'Melisa', 23, 'Experta Marketing Digital', false, 'entrevista' ),
+            new Empleado( 'Ximena', 32, 'Administradora y generadora de contenidos', false, 'prueba' ),
+            new Empleado( 'Germán Darío', 34, 'Periodismo digital y contenidos comerciales', false, 'resultado' )
         ];
         this .contradado = false;
     }
@@ -36,4 +39,5 @@ export class EmpleadoComponent {
     public cambiaEstadoContradado( valor ) {
         this .contradado = valor;
     }
+
 }
