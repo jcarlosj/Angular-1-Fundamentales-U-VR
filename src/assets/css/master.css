@@ -25,3 +25,10 @@
     text-decoration: line-through;
     text-transform: capitalize;
 }
+
+.item_activo {
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    padding: 3px;
+}
