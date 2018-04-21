@@ -12,6 +12,7 @@ const appRoutes: Routes = [
     { path: 'empleado', component: EmpleadoComponent },     // Ruta para el componente 'empleado'
     { path: 'fruta', component: FrutaComponent },           // Ruta para el componente 'fruta'
     { path: 'contacto', component: ContactoComponent },     // Ruta para el componente 'contacto'
+    { path: 'contacto/:page', component: ContactoComponent },// Ruta para el componente 'contacto' al que se le puede paar un parámetro por la URL
     { path: '**', component: HomeComponent }                // Ruta por defecto cualquier página ** (páginas no existentes, se puede crear un componente para despliegue de página 404 )
 ];
 
