@@ -27,9 +27,16 @@ export class ContactoComponent {
         });
     }
 
-    public redireccionar() {
-        // Con el método 'navigate' de 'router' se puede indicar la ruta y el parámetro que se desea pasar a la misma
-        this ._router .navigate([ '/contacto', 'parametro-de-la-url' ]);
+    public redireccionar( go = null ) {
+
+        console .log( 'go: ', go );
+
+        if( go == null ) {
+            // Con el método 'navigate' de 'router' se puede indicar la ruta y el parámetro que se desea pasar a la misma
+            this ._router .navigate([ '/contacto', 'parametro-de-la-url' ]);
+        }
+
+        this ._router .navigate([ '/home' ]);       // Redirecciona al Home
     }
 
 }

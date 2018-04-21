@@ -2,4 +2,5 @@
 <p *ngIf="parametro"><b>Parámetro pasado por la URL:</b> {{ parametro }}</p>
 <p *ngIf="!parametro">
     <button (click)="redireccionar()">Ir a la página con parámetro en la URL</button>
+    <button (click)="redireccionar( 'home' )">Ir al home</button>
 </p>
