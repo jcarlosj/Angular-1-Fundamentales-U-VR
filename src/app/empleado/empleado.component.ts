@@ -43,4 +43,8 @@ export class EmpleadoComponent {
         this .contradado = valor;
     }
 
+    public logColorSeleccionado() {
+        console .log( `Color seleccionado: ${this .color_seleccionado}` );
+    }
+
 }
