@@ -14,6 +14,7 @@ export class EmpleadoComponent {
     public equipo:Array<Empleado>;      // Define una propiedad 'Array' de tipo Empleado (Listado de 'registros' de empleados)
     public contradado: boolean; // Define una propiedad de tipo 'boolean'
     public color: string;
+    public color_seleccionado:string;
 
     /* Constructor */
     constructor() {
@@ -28,6 +29,7 @@ export class EmpleadoComponent {
         ];
         this .contradado = false;
         this .color = 'green';
+        this .color_seleccionado = '#CCCCCC';
     }
 
     /* Métodos de Angular */

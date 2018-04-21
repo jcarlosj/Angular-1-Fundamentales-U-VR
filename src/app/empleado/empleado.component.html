@@ -1,5 +1,15 @@
 <h2>{{ nombre_componente }}</h2>
 
+<h3>Selector de colores</h3>
+<input type="text" name="" value="">
+<div [ngStyle]="{
+    'background-color': color_seleccionado,
+    'width': '200px',
+    'height': '200px',
+    'margin': '8px 0'
+}">
+</div>
+
 <div *ngIf="contradado == false">
     <h3>Trabajador de planta</h3>
     <button (click)="cambiaEstadoContradado( true )" >Candidatos</button>
