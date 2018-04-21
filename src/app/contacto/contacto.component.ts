@@ -27,4 +27,9 @@ export class ContactoComponent {
         });
     }
 
+    public redireccionar() {
+        // Con el método 'navigate' de 'router' se puede indicar la ruta y el parámetro que se desea pasar a la misma
+        this ._router .navigate([ '/contacto', 'parametro-de-la-url' ]);
+    }
+
 }
