@@ -1,14 +1,18 @@
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+import { HomeComponent } from './home/home.component';
 import { EmpleadoComponent } from './empleado/empleado.component';
 import { FrutaComponent } from './fruta/fruta.component';
+import { ContactoComponent } from './contacto/contacto.component';
 
 const appRoutes: Routes = [
-    { path: '', component: EmpleadoComponent },             // Ruta por defecto  para página inicial /
+    { path: '', component: HomeComponent },                 // Ruta por defecto  para página inicial /
+    { path: 'home', component: HomeComponent },             // Ruta para el componente 'home'
     { path: 'empleado', component: EmpleadoComponent },     // Ruta para el componente 'empleado'
     { path: 'fruta', component: FrutaComponent },           // Ruta para el componente 'fruta'
-    { path: '**', component: EmpleadoComponent }            // Ruta por defecto cualquier página ** (páginas no existentes, se puede crear un componente para despliegue de página 404 )
+    { path: 'contacto', component: ContactoComponent },     // Ruta para el componente 'contacto'
+    { path: '**', component: HomeComponent }                // Ruta por defecto cualquier página ** (páginas no existentes, se puede crear un componente para despliegue de página 404 )
 ];
 
 export const appRoutingProviders: any[] = [];
