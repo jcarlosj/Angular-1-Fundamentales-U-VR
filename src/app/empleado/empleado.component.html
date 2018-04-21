@@ -5,9 +5,10 @@
 <button (click)="logColorSeleccionado()">Mostrar log</button>
 <pre [style.border]="color_seleccionado == 'red' ? '3px solid purple' : '1px solid gray'"
      [ngClass]="{
-         fondo_azul: color_seleccionado == 'blue',        
+         fondo_azul: color_seleccionado == 'blue',
          fondo_verde: color_seleccionado == 'green',
-         fondo_naranja: color_seleccionado == 'orange'
+         fondo_naranja: color_seleccionado == 'orange',
+         fuente_fija: true
      }"><b>Color seleccionado: </b> {{ color_seleccionado }}
 </pre>
 <div [ngStyle]="{
