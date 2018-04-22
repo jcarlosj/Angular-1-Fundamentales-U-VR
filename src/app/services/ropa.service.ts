@@ -14,7 +14,7 @@ export class RopaService {
         return this .nombre_prenda;
     }
 
-    public setRopa( nombre_prenda ) : Array<string> {
+    public setRopa( nombre_prenda: string ) : Array<string> {
         this .coleccion .push( nombre_prenda );     // Agrego elemento al 'Array'
 
         return this .getRopa();

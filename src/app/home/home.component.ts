@@ -12,7 +12,7 @@ import { RopaService } from '../services/ropa.service';
 export class HomeComponent {
     public title: string = 'Home';
     public listado_ropa: Array<string>;
-    public prenda_a_guardar: string;
+    public prenda_a_guardar: string = null;
     /* Constructor
        Inyectamos el Servicio en la clase a través del constructor (Automáticamente
        Angular las instancia para que estén disponibles) */
@@ -23,5 +23,13 @@ export class HomeComponent {
     public ngOnInit() {
         this .listado_ropa = this ._ropaService .getRopa();
         console .log( 'COLECCIÓN: ', this .listado_ropa );
+    }
+
+    public guardarPrenda() {
+        // Valida que la el valor de 'prenda_a_guardar' sea diferente de 'null'
+        if( this .prenda_a_guardar != null ) {
+            this ._ropaService .setRopa( this .prenda_a_guardar );
+            this .prenda_a_guardar = null;
+        }
     }
 }

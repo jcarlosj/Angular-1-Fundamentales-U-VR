@@ -1,6 +1,7 @@
 <h2>{{ title }}</h2>
 
-<input type="text" [(ngModel)]="prenda_a_guardar"><button type="button">Agregar prenda</button>
+<input type="text" [(ngModel)]="prenda_a_guardar">
+<button (click)="guardarPrenda()" type="button">Agregar prenda</button>
 <p *ngIf="prenda_a_guardar"><b>Prenda a guardar: <span class="prenda_a_guardar">{{ prenda_a_guardar }}</span></b></p>
 <div *ngIf="listado_ropa" class="">
     <h3>Listado de ropa</h3>
