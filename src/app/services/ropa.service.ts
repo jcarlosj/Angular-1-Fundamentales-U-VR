@@ -24,4 +24,10 @@ export class RopaService {
         return this .coleccion;
     }
 
+    public deleteRopa( index: number ) : Array<string> {
+        this .coleccion .splice( index, 1 );        // Para eliminar le indicamos el índice y la cantidad de elementos a eliminar apartir de ese 'index'
+
+        return this .getRopa();
+    }
+
 }

@@ -6,6 +6,8 @@
 <div *ngIf="listado_ropa" class="">
     <h3>Listado de ropa</h3>
     <ul>
-        <li *ngFor="let prenda of listado_ropa">{{ prenda }}</li>
+        <li *ngFor="let prenda of listado_ropa; let i = index;">
+            {{ prenda }} <button (click)="eliminarPrenda( i )">eliminar</button>
+        </li>
     </ul>
 </div>

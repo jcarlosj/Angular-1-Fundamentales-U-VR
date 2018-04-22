@@ -32,4 +32,8 @@ export class HomeComponent {
             this .prenda_a_guardar = null;
         }
     }
+
+    public eliminarPrenda( index: number ) {
+        this ._ropaService .deleteRopa( index );
+    }
 }
