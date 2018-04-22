@@ -1,5 +1,4 @@
 <h2>{{ title }}</h2>
-
 <input type="text" [(ngModel)]="prenda_a_guardar">
 <button (click)="guardarPrenda()" type="button">Agregar prenda</button>
 <p *ngIf="prenda_a_guardar"><b>Prenda a guardar: <span class="prenda_a_guardar">{{ prenda_a_guardar }}</span></b></p>
@@ -11,3 +10,14 @@
         </li>
     </ul>
 </div>
+<hr />
+<h4>Fecha como la retorna el componente </h4>
+<ul>
+    <li>{{ fecha }}</li>
+</ul>
+<h4>Aplicando Pipe para fecha </h4>
+<ul>
+    <li>{{ fecha | date:'fullDate' }}</li>
+    <li>{{ fecha | date:'dd-MM-yy' }}</li>
+    <li>{{ fecha | date:'yyyy/MM/dd' }}</li>
+</ul>

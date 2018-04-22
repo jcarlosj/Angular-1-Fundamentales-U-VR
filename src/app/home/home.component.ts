@@ -13,12 +13,15 @@ export class HomeComponent {
     public title: string = 'Home';
     public listado_ropa: Array<string>;
     public prenda_a_guardar: string = null;
+    public fecha: any;
     /* Constructor
        Inyectamos el Servicio en la clase a través del constructor (Automáticamente
        Angular las instancia para que estén disponibles) */
     public constructor(
         private _ropaService: RopaService
-    ) {}
+    ) {
+        this .fecha = new Date();
+    }
 
     public ngOnInit() {
         this .listado_ropa = this ._ropaService .getRopa();
