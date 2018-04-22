@@ -34,6 +34,10 @@ export class HomeComponent {
     }
 
     public eliminarPrenda( index: number ) {
-        this ._ropaService .deleteRopa( index );
+
+        if ( window .confirm( `¿Realmente quieres eliminar ${this .listado_ropa[ index ]}?` ) ) {
+            this ._ropaService .deleteRopa( index );
+        }
+
     }
 }
