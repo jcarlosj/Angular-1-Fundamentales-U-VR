@@ -20,7 +20,7 @@ export class HomeComponent {
     ) {}
 
     public ngOnInit() {
-        this .prenda = this ._ropaService .prueba();
+        this .prenda = this ._ropaService .prueba( 'Camisa polo azul' );
         console .log( 'PRENDA: ', this .prenda );
     }
 }

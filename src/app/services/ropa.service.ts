@@ -4,10 +4,11 @@ import { Injectable } from '@angular/core';
 
 export class RopaService {
     /* Propiedades (Atributos) */
-    public nombre_prenda = 'Camisa leñadora roja'
+    public nombre_prenda = 'Camisa leñadora roja';
 
     /* Métodos */
-    public prueba () {
+    public prueba ( nombre_prenda: string ) {
+        this .nombre_prenda = nombre_prenda;
 
         return this .nombre_prenda;
     }
