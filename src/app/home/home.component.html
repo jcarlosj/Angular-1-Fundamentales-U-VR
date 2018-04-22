@@ -1,4 +1,4 @@
-<h2>{{ title }}</h2>
+<h2>{{ title | uppercase }}</h2>
 <input type="text" [(ngModel)]="prenda_a_guardar">
 <button (click)="guardarPrenda()" type="button">Agregar prenda</button>
 <p *ngIf="prenda_a_guardar"><b>Prenda a guardar: <span class="prenda_a_guardar">{{ prenda_a_guardar }}</span></b></p>
@@ -6,7 +6,7 @@
     <h3>Listado de ropa</h3>
     <ul>
         <li *ngFor="let prenda of listado_ropa; let i = index;">
-            {{ prenda }} <button (click)="eliminarPrenda( i )">eliminar</button>
+            {{ prenda | lowercase }} <button (click)="eliminarPrenda( i )">eliminar</button>
         </li>
     </ul>
 </div>
@@ -17,7 +17,7 @@
 </ul>
 <h4>Aplicando Pipe para fecha </h4>
 <ul>
-    <li>{{ fecha | date:'fullDate' }}</li>
+    <li>{{ fecha | date:'fullDate' | lowercase }}</li>
     <li>{{ fecha | date:'dd-MM-yy' }}</li>
     <li>{{ fecha | date:'yyyy/MM/dd' }}</li>
 </ul>
