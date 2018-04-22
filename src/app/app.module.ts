@@ -9,13 +9,16 @@ import { FrutaComponent } from './fruta/fruta.component';
 import { EmpleadoComponent } from './empleado/empleado.component';
 import { ContactoComponent } from './contacto/contacto.component';
 
+import { MultiplicaPipe } from './pipes/multiplica.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     FrutaComponent,
     EmpleadoComponent,
-    ContactoComponent
+    ContactoComponent,
+    MultiplicaPipe
   ],
   imports: [
     BrowserModule,
