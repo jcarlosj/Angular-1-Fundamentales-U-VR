@@ -11,7 +11,7 @@ import { RopaService } from '../services/ropa.service';
 
 export class HomeComponent {
     public title: string = 'Home';
-    public prenda: string;
+    public listado_ropa: Array<string>;
     /* Constructor
        Inyectamos el Servicio en la clase a través del constructor (Automáticamente
        Angular las instancia para que estén disponibles) */
@@ -20,7 +20,7 @@ export class HomeComponent {
     ) {}
 
     public ngOnInit() {
-        this .prenda = this ._ropaService .prueba( 'Camisa polo azul' );
-        console .log( 'PRENDA: ', this .prenda );
+        this .listado_ropa = this ._ropaService .getRopa();
+        console .log( 'COLECCIÓN: ', this .listado_ropa );
     }
 }

@@ -5,6 +5,7 @@ import { Injectable } from '@angular/core';
 export class RopaService {
     /* Propiedades (Atributos) */
     public nombre_prenda = 'Camisa leñadora roja';
+    public coleccion = [ 'Pantalones cargo caqui', this .nombre_prenda, 'Medias de lana grises' ];
 
     /* Métodos */
     public prueba ( nombre_prenda: string ) {
@@ -12,4 +13,15 @@ export class RopaService {
 
         return this .nombre_prenda;
     }
+
+    public setRopa( nombre_prenda ) : Array<string> {
+        this .coleccion .push( nombre_prenda );     // Agrego elemento al 'Array'
+
+        return this .getRopa();
+    }
+
+    public getRopa() : Array<string> {
+        return this .coleccion;
+    }
+
 }
