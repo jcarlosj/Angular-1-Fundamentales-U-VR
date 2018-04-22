@@ -12,6 +12,7 @@ import { RopaService } from '../services/ropa.service';
 export class HomeComponent {
     public title: string = 'Home';
     public listado_ropa: Array<string>;
+    public prenda_a_guardar: string;
     /* Constructor
        Inyectamos el Servicio en la clase a través del constructor (Automáticamente
        Angular las instancia para que estén disponibles) */
